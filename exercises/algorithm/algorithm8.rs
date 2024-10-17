@@ -2,6 +2,10 @@
 	queue
 	This question requires you to use queues to implement the functionality of the stac
 */
+
+// I AM NOT DONE
+
+
 #[derive(Debug)]
 pub struct Queue<T> {
     elements: Vec<T>,
@@ -75,6 +79,7 @@ impl<T> myStack<T> {
         if self.q1.is_empty() {
             return Err("Stack is empty")
         }
+        // 修改
         while let Ok(mut elem) = self.q1.dequeue() {
             if self.q1.is_empty() {
                 std::mem::swap(&mut self.q1, &mut self.q2);

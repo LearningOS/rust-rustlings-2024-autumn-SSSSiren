@@ -2,7 +2,7 @@
 	graph
 	This problem requires you to implement a basic graph functio
 */
-
+// I AM NOT DONE
 
 use std::collections::{HashMap, HashSet};
 use std::fmt;
@@ -40,6 +40,8 @@ impl Graph for UndirectedGraph {
 
         let mut left = Vec::<(String, i32)>::new();
             left.push((from_node.to_string(), length));
+
+        //修改
         self.adjacency_table_mutable().entry(to_node.to_string())
             .and_modify(|x| x.push((from_node.to_string(), length)))
             .or_insert(left);
